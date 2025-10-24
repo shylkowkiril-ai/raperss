@@ -1,0 +1,197 @@
+<!doctype html>
+<html lang="pl">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>4 Raperzy — 50 Cent · Snoop Dogg · 2Pac · The Notorious B.I.G.</title>
+  <style>
+    :root{
+      --bg:#0f1724;
+      --card:#0b1220;
+      --accent:#e83350;
+      --muted:#9aa6b2;
+      --text:#e6eef3;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+      background: linear-gradient(180deg,var(--bg),#07101a);
+      color:var(--text);
+      padding:32px;
+    }
+    header{
+      text-align:center;
+      margin-bottom:24px;
+    }
+    header h1{
+      margin:0;
+      font-size:28px;
+      letter-spacing:0.6px;
+    }
+    header p{ margin:6px 0 0; color:var(--muted) }
+
+    .grid{
+      display:grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap:18px;
+      align-items:start;
+    }
+
+    .card{
+      background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(0,0,0,0.06));
+      border-radius:12px;
+      padding:14px;
+      box-shadow: 0 6px 18px rgba(2,6,23,0.6);
+      border: 1px solid rgba(255,255,255,0.03);
+      min-height:380px;
+      display:flex;
+      flex-direction:column;
+    }
+
+    .photo{
+      width:100%;
+      border-radius:8px;
+      overflow:hidden;
+      height:220px;
+      display:block;
+      margin-bottom:12px;
+      background:linear-gradient(90deg,#07101a,#09202a);
+      display:flex;
+      align-items:center;
+      justify-content:center;
+    }
+    .photo img{
+      width:100%;
+      height:100%;
+      object-fit:cover;
+      display:block;
+    }
+
+    h2{
+      margin:0 0 6px;
+      font-size:18px;
+    }
+    .subtitle{ color:var(--muted); font-size:13px; margin-bottom:10px }
+
+    p.bio{
+      margin:0 0 12px;
+      line-height:1.45;
+      color:#dbe6ef;
+      flex-grow:1;
+    }
+
+    .song{
+      margin-top:8px;
+      padding:10px;
+      border-radius:8px;
+      background:linear-gradient(90deg, rgba(232,51,80,0.08), rgba(255,255,255,0.01));
+      border:1px solid rgba(232,51,80,0.12);
+      display:flex;
+      align-items:center;
+      gap:10px;
+    }
+    .song .tag{
+      background:var(--accent);
+      color:white;
+      font-weight:700;
+      padding:6px 10px;
+      border-radius:6px;
+      font-size:13px;
+    }
+    .song .title{ font-size:14px; color:var(--text) }
+
+    footer{
+      margin-top:20px;
+      color:var(--muted);
+      text-align:center;
+      font-size:13px;
+    }
+
+    /* responsywność */
+    @media (max-width:1100px){
+      .grid{ grid-template-columns: repeat(2, 1fr); }
+    }
+    @media (max-width:600px){
+      .grid{ grid-template-columns: 1fr; }
+      body{ padding:18px; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Ikony hip-hopu: 50 Cent · Snoop Dogg · 2Pac · The Notorious B.I.G.</h1>
+    <p>Każda kolumna: zdjęcie, krótka biografia i jedna rozpoznawalna piosenka.</p>
+  </header>
+
+  <main class="grid">
+    <!-- 50 Cent -->
+    <article class="card">
+      <div class="photo">
+       <img src="images/50cent1.jpg" alt="50 Cent">
+      </div>
+      <h2>50 Cent</h2>
+      <div class="subtitle">Curtis Jackson — raper, aktor i producent</div>
+      <p class="bio">
+        50 Cent (Curtis Jackson) stał się światową gwiazdą dzięki debiutanckiemu albumowi *Get Rich or Die Tryin'* (2003), który przyniósł mu ogromną popularność i wielokrotne certyfikaty sprzedaży. Jego styl łączy gangsta rap z mocnymi, chwytliwymi refrenami i współpracami z topowymi producentami. 
+      </p>
+      <div class="song">
+        <div class="tag">Top</div>
+        <div class="title">"In da Club"</div>
+      </div>
+    </article>
+
+    <!-- Snoop Dogg -->
+    <article class="card">
+      <div class="photo">
+        <img src="images/snoopdog1.jpg" alt="Snoop Dogg">
+      </div>
+      <h2>Snoop Dogg</h2>
+      <div class="subtitle">Calvin Broadus — legenda Zachodniego Wybrzeża</div>
+      <p class="bio">
+        Snoop Dogg zyskał rozgłos we wczesnych latach 90., współpracując z Dr. Dre (m.in. na albumie *The Chronic*). Jego luźny flow i charakterystyczny głos sprawiły, że stał się jedną z najbardziej rozpoznawalnych postaci hip-hopu, z długą karierą i wieloma hitami.
+      </p>
+      <div class="song">
+        <div class="tag">Top</div>
+        <div class="title">"Drop It Like It's Hot"</div>
+      </div>
+    </article>
+
+    <!-- 2Pac -->
+    <article class="card">
+      <div class="photo">
+        <img src="images/2pac1.jpg" alt="2Pac">
+      </div>
+      <h2>2Pac (Tupac Shakur)</h2>
+      <div class="subtitle">Tupac Amaru Shakur — jeden z największych</div>
+      <p class="bio">
+        Tupac (2Pac) jest uważany za jednego z najważniejszych i najbardziej wpływowych raperów w historii. Jego teksty poruszały tematy społeczne, tożsamość i osobiste doświadczenia; po dziś dzień jest ikoną i inspiracją dla wielu artystów.
+      </p>
+      <div class="song">
+        <div class="tag">Top</div>
+        <div class="title">"California Love"</div>
+      </div>
+    </article>
+
+    <!-- The Notorious B.I.G. -->
+    <article class="card">
+      <div class="photo">
+        <img src="images/biggie1.jpg" alt="The Notorious B.I.G.">
+      </div>
+      <h2>The Notorious B.I.G.</h2>
+      <div class="subtitle">Christopher Wallace — Biggie Smalls</div>
+      <p class="bio">
+        The Notorious B.I.G. (Biggie) był kluczową postacią sceny East Coast w połowie lat 90. Jego płynny, głęboki głos i perfekcyjne frazowanie uczyniły go legendą hip-hopu. Jego albumy i single pozostają klasykami gatunku.
+      </p>
+      <div class="song">
+        <div class="tag">Top</div>
+        <div class="title">"Juicy"</div>
+      </div>
+    </article>
+  </main>
+
+  <footer>
+    Źródła: krótkie biografie i piosenki oparte na ogólnodostępnych opisach artystów (możesz edytować treść i obrazy).
+  </footer>
+</body>
+</html>
